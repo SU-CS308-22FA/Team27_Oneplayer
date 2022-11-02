@@ -11,6 +11,9 @@ public interface User_services {
     // Read operation
     List<User> fetchUserList();
 
+    //find mail address
+    Boolean findMailaddress(User user);
+
     // Update operation
     User updateUser(User user,
                     Long UserId);

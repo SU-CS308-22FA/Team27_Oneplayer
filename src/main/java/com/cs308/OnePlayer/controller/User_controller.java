@@ -44,11 +44,15 @@ public class User_controller {
     // Delete operation
     @DeleteMapping("/users/{id}")
     public String deleteUserById(@PathVariable("id")
-                                       Long UserId)
+                                 Long UserId)
     {
-        UserService.deleteUserById(
-                UserId);
-        return "Deleted Successfully";
+        if(UserService.deleteUserById(
+                UserId)){
+            return "Deleted Successfully";
+        }
+        else{
+            return "No such a id";
+        }
     }
 
 }

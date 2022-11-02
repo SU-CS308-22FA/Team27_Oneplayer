@@ -15,11 +15,32 @@ public class User_serviceslmpl
     @Autowired
     private User_repository UserRepository;
 
+    //find mail address
+    @Override
+    public Boolean findMailaddress(User user){
+        List<User> dummy = UserRepository.findAll();
+        for (User variable: dummy
+        ) {
+            if(variable.getUser_MailAddress().equals(user.getUser_MailAddress())){
+                return true;
+            }
+        }
+        return false;
+
+    }
+
     // Save operation
     @Override
     public User saveUser(User user)
     {
-        return UserRepository.save(user);
+        if(!findMailaddress(user))
+            return UserRepository.save(user);
+
+        user.setUser_MailAddress("Email addres already used");
+        user.setUserName(null);
+        user.setUser_Password(null);
+        return user;
+
     }
 
     // Read operation
