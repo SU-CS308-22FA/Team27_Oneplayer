@@ -223,14 +223,14 @@ img{
         </div>
       </div>
 
-    <form>
+    <form action="insert.php" method="POST">
         <h3>Don't Have an Account? Sign Up!</h3>
 
         <label for="Name">Name</label>
         <input type="Name" placeholder="Name" id="name">
 
         <label for="LastName">Last Name</label>
-        <input type="LastName" placeholder="Last Name" id="LastName">
+        <input type="LastName" placeholder="Last Name" id="lastName">
 
         <label for="username">E-mail</label>
         <input type="text" placeholder="E-mail" id="email">
@@ -243,7 +243,7 @@ img{
         <label for="password">Password</label>
         <input type="password" placeholder="Password" id="password">
 
-        <button>Create Account</button>
+        <button name="create" type = "submit"> Create Account </button>
     
     </form>
 
