@@ -15,12 +15,12 @@ public class User_serviceslmpl
     @Autowired
     private User_repository UserRepository;
 
-    //find mail address
+    // Find Mail Address
     @Override
     public Boolean findMailaddress(User user){
         List<User> dummy = UserRepository.findAll();
         for (User variable: dummy
-        ) {
+             ) {
             if(variable.getUser_MailAddress().equals(user.getUser_MailAddress())){
                 return true;
             }
@@ -87,8 +87,14 @@ public class User_serviceslmpl
 
     // Delete operation
     @Override
-    public void deleteUserById(Long UserId)
+    public Boolean deleteUserById(Long UserId)
     {
-        UserRepository.deleteById(UserId);
+        if(UserRepository.existsById(UserId)) {
+            UserRepository.deleteById(UserId);
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }

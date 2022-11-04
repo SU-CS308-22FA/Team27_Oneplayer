@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Objects;
 
 // Annotation
 @RestController
@@ -44,12 +45,12 @@ public class User_controller {
     // Delete operation
     @DeleteMapping("/users/{id}")
     public String deleteUserById(@PathVariable("id")
-                                 Long UserId)
+                                       Long UserId)
     {
         if(UserService.deleteUserById(
-                UserId)){
-            return "Deleted Successfully";
-        }
+            UserId)){
+        return "Deleted Successfully";
+    }
         else{
             return "No such a id";
         }

@@ -8,16 +8,17 @@ public interface User_services {
     // Save operation
     User saveUser(User user);
 
+    // Find Mailaddress
+
+    Boolean findMailaddress(User user);
+
     // Read operation
     List<User> fetchUserList();
-
-    //find mail address
-    Boolean findMailaddress(User user);
 
     // Update operation
     User updateUser(User user,
                     Long UserId);
 
     // Delete operation
-    void deleteUserById(Long UserId);
+    Boolean deleteUserById(Long UserId);
 }
