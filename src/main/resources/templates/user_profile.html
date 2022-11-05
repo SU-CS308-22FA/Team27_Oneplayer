@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile Page</title>
+</head>
+<body>
+<p>User can change their information here!</p>
+<form action="#" th:action="@{/user_profile}" th:object="${user}" method="post">
+
+    <p>User Id: <input type="text" th:placeholder="${user.getId()}" id="id" th:field="*{id}"/></p>
+    <p>Name <input type="text" th:placeholder="${user.getfname()}" id="fname" th:field="*{fname}"/></p>
+    <p>Last Name<input type="text" th:placeholder="${user.getfname()}" id="lname" th:field="*{lname}"/> </p>
+    <p>E-mail<input type="text" th:placeholder="${user.getfname()}" id="email" th:field="*{email}"/></p>
+    <p>Username <input type="text" th:placeholder="${user.getfname()}" id="username" th:field="*{username}"/></p>
+    <p>Password<input type="password" th:placeholder="${user.getPassword()}" id="password" th:field="*{password}"/></p>
+    <button type = "submit" name="submit"> Update User Info </button>
+    <button type="submit" name="delete">Delete Account</button>
+</form>
+</body>
+</html>
