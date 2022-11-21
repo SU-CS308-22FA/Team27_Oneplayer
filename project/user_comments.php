@@ -11,6 +11,8 @@ if(isset($_SESSION['user_id'])){
    header('location:home.php');
 };
 
+
+
 if(isset($_POST['edit_comment'])){
 
    $edit_comment_id = $_POST['edit_comment_id'];
@@ -31,6 +33,9 @@ if(isset($_POST['edit_comment'])){
    
 }
 
+
+
+
 if(isset($_POST['delete_comment'])){
    $delete_comment_id = $_POST['comment_id'];
    $delete_comment_id = filter_var($delete_comment_id, FILTER_SANITIZE_STRING);
@@ -38,6 +43,7 @@ if(isset($_POST['delete_comment'])){
    $delete_comment->execute([$delete_comment_id]);
    $message[] = 'comment deleted successfully!';
 }
+
 
 ?>
 
