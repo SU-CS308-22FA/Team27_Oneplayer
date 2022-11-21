@@ -11,6 +11,8 @@ if(isset($_SESSION['user_id'])){
    header('location:home.php');
 };
 
+
+
 if(isset($_POST['edit_comment'])){
 
    $edit_comment_id = $_POST['edit_comment_id'];
