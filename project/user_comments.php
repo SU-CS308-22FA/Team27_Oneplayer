@@ -32,6 +32,8 @@ if(isset($_POST['edit_comment'])){
 }
 
 
+
+
 if(isset($_POST['delete_comment'])){
    $delete_comment_id = $_POST['comment_id'];
    $delete_comment_id = filter_var($delete_comment_id, FILTER_SANITIZE_STRING);
