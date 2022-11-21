@@ -14,6 +14,7 @@ include 'components/like_post.php';
 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,6 +30,7 @@ include 'components/like_post.php';
 
 </head>
 <body>
+
 
 <?php include 'components/user_header.php'; ?>
 
