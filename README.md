@@ -20,7 +20,7 @@ Project admin panel: [link](http://18.205.247.104/Team27_oneplayer/project/admin
 - How to report a bug: If someones find a bug, they can report the bugs using github issues page and creating new issue. 
 - Known Bugs: 
 
-1)After signing up, there is a register button to create an account again.
+1) After signing up, there is a register button to create an account again.
 
 2) There is no manager login right now.
 
